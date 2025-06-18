@@ -1,38 +1,173 @@
-.App {
+.body{
+  margin: 0;
+  color: brown;
+  direction: rtl;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: linear-gradient(to right, beige, brown);
+  color: #222;
+
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.container{
+  background-color: linear-gradient(135deg, beige, brown);
+  padding: 1rem;
   text-align: center;
+  max-width: 100%;
+  margin: auto;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #222;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-content{
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items:flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.turn-indicator{
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+.bord-wrapper{
+  position: relative;
+}
+
+.button{
+  display:flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  max-width: 100%;
+  border: 4px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.restart-button{
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: gray;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.restart-button:hover{
+  background-color: beige;
+}
+.instructions{
+  margin-top: 2rem;
+  background-color: burlywood;
+  padding: 1rem;
+  margin-left: 25px;
+  border-radius: 8px;
+  text-align: right;
+  max-width: 300px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.moves-list{
+  background-color: burlywood;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  max-width: 300px;
+  color: #222;
+  font-size: 0.9rem;
+  text-align: right;
+}
+.moves-list h3{
+  margin-top: 0;
+  color: #444;
+}
+.capture-section{
+  margin-top: 2rem;
+  background-color: burlywood;
+  padding: 0.1rem;
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  color: #222;
+  font-size: 1rem;
+  text-align: right;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+.capture-section h3{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #444;
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem;
+}
+.capture-section div{
+margin-bottom: 0.7rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+flex-wrap: wrap;
+}
+.capture-section strong{
+  min-width: 80px;
+  display: inline-block;
+  color: gray;
+}
+.capture-section span{
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.game-mode{
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.game-mode label{
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.game-over-message{
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  color: bisque;
+}
+
+.bord-wrapper,
+.instructions{
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+@media (max-width:768px) {
+  .main-content{
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+  h1{
+    font-size: 1.5rem;
+  }
+  .instructions{
+    margin-top: 0;
   }
 }
