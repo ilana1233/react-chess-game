@@ -36,6 +36,7 @@ function App() {
     };
     return map[piece] || '?';
   };
+  
 
   function makeRandomMove() {
     safeGameMutate((g) => {
